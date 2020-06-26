@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "9fc99232-9099-44af-988d-4bb646352175",
+		"name": "Heroku Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/city/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e796902-2d77-41da-acb9-e1c4975664ef",
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(200);})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/London/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"London",
+						"users"
+					]
+				},
+				"description": "London City User"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/city/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9ce60f45-6eff-4cec-9fa6-4872afde29e6",
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(300);})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/London/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"London",
+						"users"
+					]
+				},
+				"description": "Negative testing"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/city/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df5b3453-9844-485b-a68a-ac4c2f705cb9",
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(200);})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/Manchester/users\n",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"Manchester",
+						"users\n"
+					]
+				},
+				"description": "Manchester Testing, it returns an empty array."
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/city/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b7b9322-c524-48a0-9113-0e1dae05c88b",
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(401);})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/city/Manchester/users\n",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"city",
+						"Manchester",
+						"users\n"
+					]
+				},
+				"description": "Manchester Negative Testing, it returns an empty array."
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/instructions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04fbc131-5d28-4dd3-865f-f45d15bc54dc",
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/instructions",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"instructions"
+					]
+				},
+				"description": "Instructions-Positive Testing"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/instructions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e77e31e-f78d-4d9b-b350-5c3a70d747c3",
+						"exec": [
+							"    pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(300);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/instructions\n",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"instructions\n"
+					]
+				},
+				"description": "Instructions-Negative Testing"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/user/ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "298667a4-a687-4550-84e8-8ccb14cd01aa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/22",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"22"
+					]
+				},
+				"description": "Positive-Testing/User - Using one userid"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/user/ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8c5bb40-f387-4e8f-9191-d12d7e1d9bee",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/user/1500\n",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"1500\n"
+					]
+				},
+				"description": "404 Negative-Testing/User, using one userid"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b60ef67f-2764-4ed2-a538-fb6c25b5ce8c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Positive-Testing/User"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "06866bc1-e9fb-4105-9462-8929f78242e1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(300);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/users",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Negative-Testing/User"
+			},
+			"response": []
+		},
+		{
+			"name": "http://bpdts-test-app-v2.herokuapp.com/swagger.json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "690cd344-5f0b-4b26-b79f-bc7a4d6af5b8",
+						"exec": [
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bpdts-test-app-v2.herokuapp.com/swagger.json",
+					"protocol": "http",
+					"host": [
+						"bpdts-test-app-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"swagger.json"
+					]
+				},
+				"description": "It returns all the endpoing request in json format. "
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
